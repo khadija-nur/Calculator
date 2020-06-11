@@ -2,4 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid red;
+}
+.calculator{
+    text-align: center;
+    display: grid;
+    background-color: rgba(201, 221, 223, 0.678);
+    grid-template-areas:
+    "p p p" 
+    "one two three"
+    "four five six"
+    "seven eight nine"
+    "zero zero zero";
+    border:2px solid rgb(24, 31, 13);
+
+}
 }
