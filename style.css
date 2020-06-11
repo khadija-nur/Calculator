@@ -4,6 +4,13 @@
     box-sizing: border-box;
     border: 1px solid red;
 }
+
+main {
+
+    margin: 80px 800px;
+    color: blue;
+
+}
 .calculator{
     text-align: center;
     display: grid;
