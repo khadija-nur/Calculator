@@ -17,4 +17,23 @@
     border:2px solid rgb(24, 31, 13);
 
 }
+.p{
+    grid-area: p;
+    width: auto;
+    height: 2rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+.number{
+    /* border: 1px solid green; */
+    
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin: .6rem;
+    box-shadow: 1px 2px 0 #555555;
 }
