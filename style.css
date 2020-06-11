@@ -2,26 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    border:2px solid rgb(188, 194, 179);
 }
 
 main {
 
-    margin: 80px 800px;
+    margin: 80px 780px;
     color: blue;
 
+
 }
+
 .calculator{
     text-align: center;
     display: grid;
     background-color: rgba(201, 221, 223, 0.678);
     grid-template-areas:
-    "p p p" 
-    "one two three"
-    "four five six"
-    "seven eight nine"
-    "zero zero zero";
-    border:2px solid rgb(24, 31, 13);
+    "p p p p" 
+    "one two three plus"
+    "four five six divide"
+    "seven eight nine multiply"
+    "zero dot equals equals";
 
 }
 .p{
@@ -32,15 +33,19 @@ main {
 
 button{
     cursor: pointer;
-}
-
-.number{
-    /* border: 1px solid green; */
-    
+    width: auto;
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
     font-size: 2rem;
     margin: .6rem;
-    box-shadow: 1px 2px 0 #555555;
+    box-shadow: 3px 5px rgba(178, 180, 180, 0.349);
+
+}
+
+.number{
+    /* border: 1px solid green; */
+    
+    
+    
 }
