@@ -13,20 +13,66 @@ main {
 
 }
 
-.calculator{
+.keys{
     text-align: center;
     display: grid;
     background-color: rgba(201, 221, 223, 0.678);
     grid-template-areas:
-    "p p p p" 
-    "one two three plus"
-    "four five six divide"
-    "seven eight nine multiply"
-    "zero dot equals equals";
+    "seven eight nine equals"
+    "four five six plus"
+    "one two three minus"
+    "zero dot multiply divide" ;
 
 }
-.p{
-    grid-area: p;
+
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.plus{
+    grid-area: plus;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.divide{
+    grid-area: divide;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+    grid-area: nine;
+}
+.multiply{
+    grid-area: multiply;
+}
+.zero{
+    grid-area: zero;
+}
+.dot{
+    grid-area: dot;
+}
+.minus{
+    grid-area: minus;
+}
+.equals{
+    grid-area: equals;
+}
     width: auto;
     height: 2rem;
 }
