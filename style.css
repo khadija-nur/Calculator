@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border:2px solid rgb(188, 194, 179);
+    border:2px solid rgb(233, 100, 38);
 }
 
 main {
-
-    margin: 80px 780px;
+    margin: 80px auto;
+    width: 70vw;
+    /* margin:  410px; */
     color: blue;
 
 
@@ -73,13 +74,27 @@ main {
 .equals{
     grid-area: equals;
 }
+
+
+.display{
+    background-color: aqua;
+    grid-area: d;
+    /* width: 100px; */
     width: auto;
     height: 2rem;
+
+}
+.equals{
+    /* width: auto; */
+    /* border-radius: 30px; */
+    /* height: 3rem; */
+
+
 }
 
 button{
     cursor: pointer;
-    width: auto;
+    /* width: auto; */
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
