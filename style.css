@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border:2px solid rgb(233, 100, 38);
+    /* border:2px solid rgb(233, 100, 38); */
 }
 
 main {
     margin: 80px auto;
     width: 70vw;
+
     /* margin:  410px; */
     color: blue;
 
@@ -80,10 +81,18 @@ main {
     background-color: aqua;
     grid-area: d;
     /* width: 100px; */
-    width: auto;
+    width: 70vw;
     height: 2rem;
 
 }
+/* #display{
+    background-color: aqua;
+    grid-area: d;
+    /* width: 100px; */
+    width: 70vw;
+    height: 2rem;
+
+} */
 .equals{
     /* width: auto; */
     /* border-radius: 30px; */
