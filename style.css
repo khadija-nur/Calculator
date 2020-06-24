@@ -88,11 +88,11 @@ main {
 /* #display{
     background-color: aqua;
     grid-area: d;
-    /* width: 100px; */
+    width: 100px; 
     width: 70vw;
     height: 2rem;
 
-} */
+}*/
 .equals{
     /* width: auto; */
     /* border-radius: 30px; */
