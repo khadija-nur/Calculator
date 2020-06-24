@@ -58,3 +58,8 @@ const parseExpressionWithminus= (expression) =>{
 
 
 }
+
+const evaluate = (expression) =>{
+    parseExpressionWithminus(expression);
+}
+
