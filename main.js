@@ -34,3 +34,15 @@ const parseExpressionWithMultiplication = (expression) =>{
     return result;
 
 };
+
+const parseExpressionWithPlus = (expression) =>{
+    const plusSeparatedNums = expression.split("+")
+    const numbers = plusSeparatedNums.map(nums => parseExpressionWithMultiplication(nums));
+    const initialValue = 0.0;
+	const result = numbers.reduce((acc, nums) => acc + nums, initialValue);
+
+    console.log("result with plus "+ result) ;
+    return result;
+
+}
+
