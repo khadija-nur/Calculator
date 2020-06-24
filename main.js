@@ -46,3 +46,15 @@ const parseExpressionWithPlus = (expression) =>{
 
 }
 
+const parseExpressionWithminus= (expression) =>{
+    const minusSeparatedNums = expression.split("-");
+    const numbers = minusSeparatedNums.map(nums => parseExpressionWithPlus(nums));
+    const initialValue = numbers[0];
+	const result = numbers.slice(1).reduce((acc, nums) => acc - nums, initialValue);
+    console.log("result with minus "+ result) ;
+    displayResults.innerHTML = result;
+    return result;
+
+
+
+}
