@@ -24,3 +24,13 @@ const parseExpressionWithDivision = (expression) =>{
         return result;
 
 };
+
+const parseExpressionWithMultiplication = (expression) =>{
+    const MultiplicationSeparatedNums = expression.split("*")
+    const numbers = MultiplicationSeparatedNums.map(nums => parseExpressionWithDivision(nums));
+    const initialValue = 1.0;
+	const result = numbers.reduce((acc, nums) => acc * nums, initialValue);
+    console.log("result with mult "+ result) ;
+    return result;
+
+};
