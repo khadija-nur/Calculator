@@ -12,6 +12,13 @@ const displayResults = document.querySelector(".display.results");
 keys.forEach(key => key.addEventListener("click", e => {
     displayExpression.innerHTML += (e.target.textContent);
 }));
+
+
+equalSign.addEventListener("click", e => {
+    const expression =  displayExpression.innerHTML;
+    return evaluate(expression)
+
+})
 const parseExpressionWithDivision = (expression) =>{
     const DivisionSeparatedNums = expression.split("÷");
     const numbers =  DivisionSeparatedNums.map(nums => +nums);
