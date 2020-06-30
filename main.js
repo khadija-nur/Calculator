@@ -59,7 +59,7 @@ const consecutiveOperators = (pressedKey, expression) => {
     console.log("functioon coperators ")
 
         if (!(operatorStrings.includes(expression[expression.length - 1]))){
-            if ((expression[expression.length - 1]).classList.value.includes("dot")){
+            if ((expression[expression.length - 1]) == dot){
                 rejectKey(pressedKey);
             }
             else
@@ -93,7 +93,7 @@ const consecutiveOperators = (pressedKey, expression) => {
 }
 const rejectKey = (key) => key.classList.toggle("reject");
 
-// ckeck for unnesessary zeros
+// check for unnesessary zeros
 // properdecimaluse
 // evaluationOnResults
 
