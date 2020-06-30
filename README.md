@@ -1,4 +1,3 @@
-# FAC20 Precouse project -Calulator
 
 ## User stories:
 User Story #1: 
