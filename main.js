@@ -34,13 +34,17 @@ keys.forEach(key => key.addEventListener("click", e => {
                }
                else{
                    rejectKey(e.target)
-    }
+               }
 
         }
     }
     else{
         canUseDot = false;
-        consecutiveOperators(e.target, displayExpression.innerHTML)
+        if ( displayExpression.innerHTML == ""){
+            rejectKey(e.target);
+        }
+        else
+            consecutiveOperators(e.target, displayExpression.innerHTML)
     }
 }));
 
@@ -53,9 +57,13 @@ equalSign.addEventListener("click", e => {
 // add functions
 const consecutiveOperators = (pressedKey, expression) => {
     console.log("functioon coperators ")
+
         if (!(operatorStrings.includes(expression[expression.length - 1]))){
-           console.log("WHAT WHAT")
-            displayExpression.innerHTML += pressedKey.innerHTML;
+            if ((expression[expression.length - 1]).classList.value.includes("dot")){
+                rejectKey(pressedKey);
+            }
+            else
+                displayExpression.innerHTML += pressedKey.innerHTML;
 
         }
         else if (!(operatorStrings.includes(expression[expression.length - 2])) ){
@@ -77,15 +85,14 @@ const consecutiveOperators = (pressedKey, expression) => {
                 displayExpression.innerHTML = expression.slice(0, -1) + pressedKey.innerHTML;
             }
         }
-        
+
         else{
             console.log("done last els")
         }
     
 }
-const rejectKey = (key) => key.classList.add("reject");
+const rejectKey = (key) => key.classList.toggle("reject");
 
-// norepeatingoperators
 // ckeck for unnesessary zeros
 // properdecimaluse
 // evaluationOnResults
