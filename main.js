@@ -6,16 +6,40 @@ const operators = Array.from(document.querySelectorAll(".operator"));
 const operatorStrings = ["+", "-", "*", "÷"]
 
 const equalSign = document.querySelector(".equals");
-
+const dot = document.querySelector(".dot")
+console.log(dot);
 const displayExpression = document.querySelector(".display.expression");
 
 const displayResults = document.querySelector(".display.results");
+let canUseDot;
+
 
 keys.forEach(key => key.addEventListener("click", e => {
+  
+    console.log(e.target.classList.value)
     if (!operators.includes(e.target)){
+
+        if (e.target !== dot){
             displayExpression.innerHTML += (e.target.textContent);
+            canUseDot = true;   
+            console.log("does not have dot")
+
+        }
+
+        else{
+               if (canUseDot == true){
+                displayExpression.innerHTML += (e.target.textContent);
+                canUseDot = false;
+
+               }
+               else{
+                   rejectKey(e.target)
+    }
+
+        }
     }
     else{
+        canUseDot = false;
         consecutiveOperators(e.target, displayExpression.innerHTML)
     }
 }));
