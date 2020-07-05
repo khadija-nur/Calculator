@@ -40,7 +40,7 @@ if 5 * - 5 = is entered, the result should be -25 (i.e. 5 x (-5)).
 
 ## Next steps:  
 
-- Make the calculator more accessible  enable keyboard usage  
+- Make the calculator more accessible- enable keyboard usage  
 - Use more objects, classes and constructor methods   
 - Add more functions - like brackets  to calculator  
 - Add more css features to increase user interactivity 
