@@ -19,6 +19,7 @@ keys.forEach(key => key.addEventListener("click", e => {
   
     soundEffect.play();
 
+    else if (!operators.includes(e.target)){
 
         if (e.target !== dot){
             displayExpression.innerHTML += (e.target.textContent);
