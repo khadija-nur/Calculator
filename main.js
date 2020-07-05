@@ -89,6 +89,17 @@ const consecutiveOperators = (pressedKey, expression) => {
             }
         }
 
+// } 
+function rejectKey(key) {
+    key.classList.remove("reject");
+    setTimeout(
+      function() {
+        key.classList.add("reject");
+      },
+      25
+    );
+  }
+
         else{
             console.log("done last els")
         }
