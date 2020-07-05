@@ -4,12 +4,13 @@
     box-sizing: border-box;
     /* border:2px solid rgb(233, 100, 38); */
     overflow: hidden;
+    
 }
 
 main {
     margin: 80px auto;
     width: 380px;
-
+    border-radius: 10px;
     /* margin:  410px; */
     /* color: blue; */
 
@@ -17,15 +18,16 @@ main {
 }
 body{
     height: 100vh;
-    /* background: radial-gradient(#fcd4d083, #fcd4d08c, #47bad486); */
-    background-color: #536e72;
+    
+    /* background: radial-gradient(#aed9e0, #fcd4d08c); */
+    background-color: black;
 }
 
 .keys{
     text-align: center;
     padding: 1rem;
     display: grid;
-    background-color: #aed9e0;
+    background-color:transparent;
     grid-template-areas:
     "clear clear dot divide"
     "seven eight nine multiply"
@@ -61,7 +63,7 @@ body{
 
 .clear{
     grid-area: clear;
-    background-color: #ffa69e;
+    background-color: #cbff4d;
 
 }
 .one{
@@ -119,10 +121,12 @@ body{
 
 
 .display{
-    background-color: #ffa69e;
+    background-color: #cbff4d;
     grid-area: d;
     /* width: 100px; */
     /* width: 70vw; */
+    /* border-top: 30px solid #aed9e0; */
+
     height: 4rem;
     font-size: 1.5rem;
     padding: 10px;
@@ -130,7 +134,7 @@ body{
 
 }
 .equals{
-    background-color: #ffa69e;
+    background-color: #cbff4d;
 
     /* width: auto; */
     /* border-radius: 30px; */
@@ -149,6 +153,7 @@ button{
     font-size: 2rem;
     margin: .3rem;
     box-shadow: 3px 5px rgba(178, 180, 180, 0.349);
+    outline: none;
 
 }
 
