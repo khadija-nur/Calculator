@@ -197,56 +197,50 @@ const checkForZeros = (pressedKey, expression) => {
 }
 
 
-// if (canInputZero == false){
-//     rejectKey(zero)
-// }
-// properdecimaluse
-// evaluationOnResults
-
-
-
 // mathematical operations functions below:
-
-const parseExpressionWithDivision = (expression) =>{
+const parseExpressionWithDivision = (expression) => {
     const DivisionSeparatedNums = expression.split("÷");
-    const numbers =  DivisionSeparatedNums.map(nums => +nums);
+    const numbers = DivisionSeparatedNums.map(nums => +nums);
     const intialValue = numbers[0];
-
-    result = numbers.slice(1).reduce((acc, nums) => acc / nums, intialValue )
+    result = numbers.slice(1).reduce((acc, nums) => acc / nums, intialValue)
     return result;
 };
 
 
-const parseExpressionWithMultiplication = (expression) =>{
+const parseExpressionWithMultiplication = (expression) => {
     const MultiplicationSeparatedNums = expression.split("*")
     const numbers = MultiplicationSeparatedNums.map(nums => parseExpressionWithDivision(nums));
     const initialValue = 1.0;
 
     const result = numbers.reduce((acc, nums) => acc * nums, initialValue);
     return result;
-
 };
 
-const parseExpressionWithPlus = (expression) =>{
+const parseExpressionWithPlus = (expression) => {
     const plusSeparatedNums = expression.split("+")
     const numbers = plusSeparatedNums.map(nums => parseExpressionWithMultiplication(nums));
     const initialValue = 0.0;
-
 	const result = numbers.reduce((acc, nums) => acc + nums, initialValue);
     return result;
 }
 
-const parseExpressionWithminus= (expression) =>{
+const parseExpressionWithminus = (expression, containsMinus) => {
     const minusSeparatedNums = expression.split("-");
     const numbers = minusSeparatedNums.map(nums => parseExpressionWithPlus(nums));
     const initialValue = numbers[0];
 
-	const result = numbers.slice(1).reduce((acc, nums) => acc - nums, initialValue);
-    displayResults.innerHTML = result;
+    let result = numbers.slice(1).reduce((acc, nums) => acc - nums, initialValue);
 
-    return result;
+    if (containsMinus) result = '-' + result;
+    displayResults.innerHTML = result;
 }
 
-const evaluate = (expression) =>parseExpressionWithminus(expression);
+const handleOperatorWithMinus = (expression) => {
+    let containsMinus = false
 
+    if (((expression.split("-").length - 1) % 2) != 0) containsMinus = true
 
+    expression = expression.replace("--", "+").replace("*-", "*").replace("÷-", "÷")
+    parseExpressionWithminus(expression, containsMinus)
+}
+const evaluate = (expression) => handleOperatorWithMinus(expression);
