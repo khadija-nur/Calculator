@@ -133,6 +133,10 @@ const consecutiveOperators = (pressedKey, expression) => {
 //     setinterval(key.classList.remove("reject"), 300)
 
     
+clear.addEventListener("click", e => {
+    displayExpression.innerHTML = "";
+    displayResults.innerHTML = ""
+})
 
 del.addEventListener("click", e => {
     console.log("hello")
