@@ -186,22 +186,8 @@ const checkForZeros = (pressedKey, expression) => {
         displayExpression.innerHTML = expression.slice(0, -1) + pressedKey.innerHTML;
 
     }
-
-
-// console.log("checking for zeros")
-//     // if(pressedKey == zero && operators.includes(expression[expression.length - 1])){
-//     //     expression += pressedKey
-//     //     canInputZero = false;
-//     // }
-    
-//     if(numberKeys.includes(pressedKey) ){
-//         console.log(numberKeys)
-//         console.log("testing")
-//         displayExpression.innerHTML = expression.slice(0, -1) + pressedKey.innerHTML;
-//     }
-
-
 }
+
 
 // if (canInputZero == false){
 //     rejectKey(zero)
