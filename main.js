@@ -9,6 +9,8 @@ const operatorStrings = ["+", "-", "*", "÷"]
 const equalSign = document.querySelector(".equals");
 const dot = document.querySelector(".dot")
 const zero = document.querySelector(".zero")
+const clear = document.querySelector(".clear")
+const del = document.querySelector(".delete")
 
 const displayExpression = document.querySelector(".display.expression");
 const displayResults = document.querySelector(".display.results");
@@ -132,8 +134,10 @@ const consecutiveOperators = (pressedKey, expression) => {
 
     
 
-// } 
-function rejectKey(key) {
+del.addEventListener("click", e => {
+    console.log("hello")
+    displayExpression.innerHTML = displayExpression.innerHTML.slice(0, -1)
+})
     key.classList.remove("reject");
     setTimeout(
       function() {
