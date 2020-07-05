@@ -1,5 +1,6 @@
 // define variable
 const keys = document.querySelectorAll(".key");
+const soundEffect =new Audio('button.mp3')
 
 const numberKeys = Array.from(document.querySelectorAll(".number"));
 const operators = Array.from(document.querySelectorAll(".operator"));
@@ -16,8 +17,8 @@ let canUseDot;
 
 keys.forEach(key => key.addEventListener("click", e => {
   
-    console.log(e.target.classList.value)
-    if (!operators.includes(e.target)){
+    soundEffect.play();
+
 
         if (e.target !== dot){
             displayExpression.innerHTML += (e.target.textContent);
@@ -49,10 +50,11 @@ keys.forEach(key => key.addEventListener("click", e => {
 }));
 
 equalSign.addEventListener("click", e => {
+
     const expression =  displayExpression.innerHTML;
+    soundEffect.play()
     return evaluate(expression);
 });
-
 
 // add functions
 const consecutiveOperators = (pressedKey, expression) => {
